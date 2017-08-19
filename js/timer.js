@@ -2,7 +2,7 @@ $(function(){
     function timer(settings){
         var config = {
             endDate: '2017-9-28 00:00',
-            timeZone: 'Asia/Seou',
+            timeZone: 'Asia/Seoul',
             hours: $('#hours'),
             minutes: $('#minutes'),
             seconds: $('#seconds'),
