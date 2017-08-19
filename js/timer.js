@@ -1,8 +1,8 @@
 $(function(){
     function timer(settings){
         var config = {
-            endDate: '2017-08-28 07:00',
-            timeZone: 'Europe/Stockholm',
+            endDate: '2017-09-28 00:00',
+            timeZone: 'Asia/Seou',
             hours: $('#hours'),
             minutes: $('#minutes'),
             seconds: $('#seconds'),
