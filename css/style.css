@@ -40,16 +40,10 @@
 /*-- Index-Page-Styling --*/
 
 body {
+    
     font-family: 'Montserrat', sans-serif;
     color: #847d74;
-    background: url("../images/1.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-color: f7f7f7;
     text-align: center;
 }
 
