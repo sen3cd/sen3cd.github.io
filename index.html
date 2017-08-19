@@ -1,52 +1,18 @@
-<!doctype html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en-us">
 <head>
-<meta charset="utf-8">
-<title>Simple Slick jQuery Countdown Timer Demo</title>
-<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="src/countdown.js"></script>
-<style>@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-.countdown_dashboard { height: 60px; }
-
-.countdown_dashboard .dash {
-  height: 30px;
-  position: relative;
-  float: left;
-*zoom:1;
-  margin: 0 5px 1em;
-  font-size: 30px;
-  font-weight: 100;
-  line-height: 1;
-  text-align: right;
-}
-
-.countdown_dashboard .dash .digit {
-  width: 18px;
-  text-align: left;
-  float: left;
-}
-
-.countdown_dashboard .dash span {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -17px;
-  border-top: 1px solid #cecece;
-  font-size: 12px;
-  padding-top: 3px;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-align: left;
-}
-</style>
+  <meta charset="UTF-8">
+  
+  <title>Revolver.js</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 </head>
-
-<body>
-<div id="jquery-script-menu">
+<body><div id="jquery-script-menu">
 <div class="jquery-script-center">
 <ul>
-<li><a href="http://www.jqueryscript.net/time-clock/Simple-Slick-jQuery-Countdown-Timer-Plugin.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/time-clock/Basic-jQuery-Countdown-Clock-Plugin-revolver-js.html">Download This Plugin</a></li>
 <li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
 </ul>
 <div class="jquery-script-ads"><script type="text/javascript"><!--
@@ -63,76 +29,56 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <div class="jquery-script-clear"></div>
 </div>
 </div>
-<h1 style="margin:150px 0 30px 0">Simple Slick jQuery Countdown Timer Demo</h1>
-<div class="countdown_dashboard">
-  <div class="dash year_dash"> <span class="dash_title">years</span>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-  </div>
-  <div class="dash day_dash"> <span class="dash_title">days</span>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-  </div>
-  <div class="dash hour_dash"> <span class="dash_title">hrs</span>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-  </div>
-  <div class="dash min_dash"> <span class="dash_title">min</span>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-  </div>
-  <div class="dash sec_dash"> <span class="dash_title">sec</span>
-    <div class="digit">0</div>
-    <div class="digit">0</div>
-  </div>
-</div>
-<p><a href="#" class="stop">Click to stop countdown</a></p>
-<pre><code>$('.countdown_dashboard').data('countdown').stop();</code></pre>
-<p><a href="#" class="start">Click to start countdown</a></p>
-<pre><code>$('.countdown_dashboard').data('countdown').start();</code></pre>
-<p><a href="#" class="update">Click to update diffSeconds</a></p>
-<pre><code>$('.countdown_dashboard').data('countdown').update({
-  diff: 3000
-});
-or
-$('.countdown_dashboard').data('countdown').update({
-  year: 11,
-  month: 11,
-  day: 11,
-  hour: 11,
-  min: 11,
-  sec: 11
-});
-</code></pre>
-<script>
-$('.countdown_dashboard').countdown();
-$('.stop').on('click', function(e){
-  e.preventDefault();
-  $('.countdown_dashboard').data('countdown').stop();
-})
-$('.start').on('click', function(e){
-  e.preventDefault();
-  $('.countdown_dashboard').data('countdown').start();
-});
-$('.update').on('click', function(e){
-  e.preventDefault();
-  $('.countdown_dashboard').data('countdown').update({
-    diff: 3000
-  });
-});
-$('.end').on('click', function(e){
-  e.preventDefault();
-  $('.countdown_dashboard').data('countdown').update({
-    diff: 5,
-    onEnd: function(){
-      $('.countdown_dashboard').css('background', '#c0392b');
-    }
-  });
-});
+	<div id="wrapper">
+		<header id="header" class="clearfix">
+			<div id="logo">
+				<h1>Revolver.js</h1>
+			</div>
+			<!-- <nav id="gm">
+				<ul>
+					<li><a href="#download">Download</a></li>
+					<li><a href="#example">Example</a></li>
+					<li><a href="#document">Document</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</nav> -->
+		</header>
+		<article id="countDownBox">
+			<p><span id="countDown"></span></p>
+		</article>
+		
+
+		<footer id="footer"></footer>
+
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugin/jquery.revolver.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#countDown').revolver({
+			year : "2024",	//カウントダウン終了の年
+			month : "10",	//カウントダウン終了の月
+			day : "21",		//カウントダウン終了の日
+		});
+	});
 </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
