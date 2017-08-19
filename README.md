@@ -1,23 +1,31 @@
-DownCount
-=========
+# Awesome jQuery plugin
 
-jQuery countdown plugin that accounts for timezone.
+The best jQuery plugin ever.
 
-#Usage
+## Getting Started
 
-```JS
-$('.countdown').downCount({
-    date: '08/27/2013 12:00:00',
-    offset: -5
-}, function () {
-    alert('WOOT WOOT, done!');
+Download the [production version][min] or the [development version][max].
+
+[min]: https://raw.github.com/amibug/jquery.countdown/master/dist/jquery.countdown.min.js
+[max]: https://raw.github.com/amibug/jquery.countdown/master/dist/jquery.countdown.js
+
+In your web page:
+
+```html
+<script src="jquery.js"></script>
+<script src="dist/countdown.min.js"></script>
+<script>
+jQuery(function($) {
+  $.awesome(); // "awesome"
 });
+</script>
 ```
 
-#Options
-Option | Description
----|---
-date | Target date, ex `08/27/2013 12:00:00`
-offset | UTC Timezone offset
+## Documentation
+_(Coming soon)_
 
-You can also append a callback function which is called when countdown finishes.
+## Examples
+_(Coming soon)_
+
+## Release History
+_(Nothing yet)_
