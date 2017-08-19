@@ -33,7 +33,7 @@ $(function(){
             var hours = duration.hours(),
                 minutes = duration.minutes(),
                 seconds = duration.seconds();
-            days = duration.days()+22;
+            days = duration.days()+32;
             if(hours  <= 0 && minutes <= 0 && seconds  <= 0 && days <= 0){
                 clearInterval(intervalID);
                 endEvent(subMessage, config.newSubMessage, clock);
